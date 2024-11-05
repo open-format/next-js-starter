@@ -1,17 +1,12 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${manrope.variable} antialiased`}>
+        <Providers>
+          <header className="hidden md:flex justify-end p-4 fixed top-0 w-full">
+            <ModeToggle />
+          </header>
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );
