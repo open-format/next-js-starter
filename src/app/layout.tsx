@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.variable} antialiased`}>
         <Providers>
-          <header className="hidden md:flex justify-end p-4 fixed top-0 w-full">
+          <header className="hidden md:flex justify-end p-2 top-0 w-full">
             <ModeToggle />
           </header>
           <main>{children}</main>

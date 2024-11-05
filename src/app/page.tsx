@@ -1,23 +1,23 @@
-"use client";
+import Authentication from "@/components/authentication";
+import Profile from "@/components/profile";
+import { getUserProfile } from "@/lib/openformat";
 
-import { Button } from "@/components/ui/button";
-import { usePrivy } from "@privy-io/react-auth";
+async function fetchUserProfile(user: string) {
+  if (!user) return null;
 
-export default function Home() {
-  const { login, logout, ready, user } = usePrivy();
+  const data = await getUserProfile(user);
 
-  if (!ready) return <div>Loading...</div>;
+  return data;
+}
+
+export default async function Home({ searchParams }: { searchParams: Promise<{ user: string }> }) {
+  const userParam = (await searchParams).user;
+  const profile = await fetchUserProfile(userParam as string);
 
   return (
-    <div>
-      {user?.wallet?.address ? (
-        <>
-          <div>wallet: {user?.wallet?.address}</div>
-          <Button onClick={logout}>Logout</Button>
-        </>
-      ) : (
-        <Button onClick={login}>Login</Button>
-      )}
+    <div className="flex flex-col items-center justify-center">
+      <Authentication />
+      <Profile profile={profile} />
     </div>
   );
 }

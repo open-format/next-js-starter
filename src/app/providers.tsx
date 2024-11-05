@@ -1,8 +1,8 @@
 "use client";
 
-import { ThemeProvider } from "@/components/theme-provider";
 import { PrivyProvider } from "@privy-io/react-auth";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ThemeProvider } from "next-themes";
 
 const queryClient = new QueryClient();
 
