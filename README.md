@@ -23,7 +23,7 @@ A Next.js template demonstrating how to easily onboard users into web3 using [Pr
 
 Instantly deploy your own copy of the template using Vercel or Netlify:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fopenformat%2Fnext-js-starter&env=NEXT_PUBLIC_PRIVY_APP_ID,OPENFORMAT_API_KEY,OPENFORMAT_DAPP_ID) [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/openformat/next-js-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fopen-format%2Fnext-js-starter&env=NEXT_PUBLIC_PRIVY_APP_ID,OPENFORMAT_API_KEY,OPENFORMAT_DAPP_ID) [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/openformat/next-js-starter)
 
 ### Local Development
 
