@@ -9,7 +9,7 @@ const apiClient = axios.create({
   },
 });
 
-export async function getUserProfile(user: string): Promise<Profile | null | unknown> {
+export async function getUserProfile(user: string): Promise<Profile | null> {
   if (!process.env.OPENFORMAT_API_KEY && !process.env.OPENFORMAT_DAPP_ID) {
     return null;
   }
@@ -26,8 +26,14 @@ export async function getUserProfile(user: string): Promise<Profile | null | unk
     const res = await apiClient.get(`/profile?${params.toString()}`);
 
     return res.data;
-  } catch (error: unknown) {
-    console.error(error);
-    return error;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      // Handle Axios specific errors
+      console.error("API Error:", error.response?.data || error.message);
+    } else {
+      // Handle other types of errors
+      console.error("Unexpected error:", error instanceof Error ? error.message : String(error));
+    }
+    return null;
   }
 }

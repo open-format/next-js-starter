@@ -1,4 +1,4 @@
-import { clsx } from "clsx";
+import { type ClassValue, clsx } from "clsx";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { twMerge } from "tailwind-merge";
@@ -8,8 +8,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function addressSplitter(address: string, split = 5): string {
+export function addressSplitter(address: string, split = 5): string | null {
   if (!address) return null;
+
   return `${address.slice(0, split)}...${address.slice(-split)}`;
 }
 
