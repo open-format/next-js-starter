@@ -30,7 +30,7 @@ Instantly deploy your own copy of the template using Vercel or Netlify:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/openformat/next-js-starter.git
+   git clone https://github.com/open-format/next-js-starter.git
    cd next-js-starter
    ```
 
