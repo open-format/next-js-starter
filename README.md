@@ -1,6 +1,8 @@
 # Open Format Next JS starter
 
-<img src="./public/images/preview.jpeg" alt="Open Format Next JS Starter" style="border-radius: 15px;" />
+<div align="center">
+  <img src="./public/images/preview.jpeg" alt="Open Format Next JS Starter" style="border-radius: 15px; max-width: 500px;" />
+</div>
 
 A Next.js template demonstrating how to easily onboard users into web3 using [Privy](https://privy.io). Users can view their recent activity and collected badges from your [Open Format dApp](https://app.openformat.tech).
 
