@@ -19,11 +19,29 @@ A Next.js template demonstrating how to easily onboard users into web3 using [Pr
 
 ## Getting Started
 
+### Prerequisites
+
+Before you begin, you'll need to set up accounts and configure a few services:
+
+1. **Open Format Dashboard**
+
+   - Create an account at [Open Format Dashboard](https://app.openformat.tech)
+   - Create a new dApp to get your `OPENFORMAT_DAPP_ID`
+   - Generate an API key to get your `OPENFORMAT_API_KEY`
+
+2. **Privy Dashboard**
+   - Create an account at [Privy Dashboard](https://dashboard.privy.io)
+   - Create a new app to get your `NEXT_PUBLIC_PRIVY_APP_ID` from the Settings section of your Privy app
+   - In the Login Methods section of your Privy app, enable:
+     - Discord
+     - Google
+     - Email
+
 ### Deploy
 
 Instantly deploy your own copy of the template using Vercel or Netlify:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fopen-format%2Fnext-js-starter&env=NEXT_PUBLIC_PRIVY_APP_ID,OPENFORMAT_API_KEY,OPENFORMAT_DAPP_ID) [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/openformat/next-js-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fopen-format%2Fnext-js-starter&env=NEXT_PUBLIC_PRIVY_APP_ID,OPENFORMAT_API_KEY,OPENFORMAT_DAPP_ID) [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/open-format/next-js-starter)
 
 ### Local Development
 
